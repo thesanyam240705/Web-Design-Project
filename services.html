@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 56px;
+    }
+
+    .service-card {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-card .card-body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #343a40 !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+  </style>
+  <title>Home Services</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Home Services</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plumbing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Electrical</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cleaning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signupcustomer.html">Sign Up for Customer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signupworker.html">Sign Up for Worker</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="clinics.html">Clinics</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Our Services</h1>
+    
+    <div class="row">
+      <!-- Service Card 1 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="C:\Users\Sanyam Gupta\Desktop\services.jpg" class="card-img-top" alt="Plumbing Service">
+          <div class="card-body">
+            <h5 class="card-title">Plumbing Services</h5>
+            <p class="card-text">Professional plumbing services for all your plumbing needs, from repairs to installations.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="C:\Users\Sanyam Gupta\Desktop\electrical.jpg" class="card-img-top" alt="Electrical Service">
+          <div class="card-body">
+            <h5 class="card-title">Electrical Services</h5>
+            <p class="card-text">Expert electrical services to ensure the safety and efficiency of your electrical systems.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <img src="C:\Users\Sanyam Gupta\Desktop\cleaning.jpg" class="card-img-top" alt="Cleaning Service">
+          <div class="card-body">
+            <h5 class="card-title">Cleaning Services</h5>
+            <p class="card-text">Comprehensive cleaning services to keep your home or office spotless and inviting.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

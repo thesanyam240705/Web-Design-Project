@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signupworker.css">
+    <title>Worker Sign Up</title>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var contactNumber = document.getElementById("contactNumber").value;
+            var address = document.getElementById("address").value;
+            var skillSet = document.getElementById("skillSet").value;
+            var experience = document.getElementById("experience").value;
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Password validation
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit");
+                return false;
+            }
+
+            if (firstName === "" || lastName === "" || contactNumber === "" || address === "" || skillSet === "" || experience === "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Worker Sign Up</h2>
+        <form action="worker_signup.php" method="post" onsubmit="return validateForm()">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="skillSet">Skill Set</label>
+            <input type="text" id="skillSet" name="skillSet" required>
+
+            <label for="experience">Experience (years)</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <input type="submit" value="Sign Up">
+
+            <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinics in Lucknow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="clinics.css">
+    
+   
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+   
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 logo-container">
+                  
+                    <img src="C:\Users\Sanyam Gupta\Desktop\logomatesgate.jpg" alt="Logo" class="logo">
+                    <h1>Clinics in Lucknow</h1>
+                </div>
+                <div class="col-md-6 text-md-center ">
+                    <h2>Find trusted healthcare services in Lucknow</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="clinic-card">
+                        <h2>Mayo Medical Centre</h2>
+                        <p>Address: Vikas Khand, Gomti Nagar, Lucknow</p>
+                        <p>Contact: (555) 123-4567</p>
+                        <p>Services: General Medicine, Pediatrics</p>
+                        <p>Working Hours: Mon-Fri 9:00 AM - 6:00 PM</p>
+                        <button class="book-appointment-btn" onclick="toggleAppointmentForm('wellnessClinic')">Book Appointment</button>
+                        <form class="appointment-form" id="wellnessClinic" onsubmit="submitAppointment('wellnessClinic'); return false;">
+                            <label for="date">Preferred Date:</label>
+                            <input type="date" id="date" name="date" required>
+                            <label for="time">Preferred Time:</label>
+                            <input type="time" id="time" name="time" required>
+                            <button type="submit">Submit Appointment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="clinic-card">
+                        <h2>Apollo Clinic Lucknow</h2>
+                        <p>Address: Jahangirbad Palace, Hazratganj, Lucknow</p>
+                        <p>Contact: (555) 987-6543</p>
+                        <p>Services: Internal Medicine, Cardiology</p>
+                        <p>Working Hours: Mon-Sat 8:00 AM - 7:00 PM</p>
+                        <button class="book-appointment-btn" onclick="toggleAppointmentForm('heartHealthClinic')">Book Appointment</button>
+                        <form class="appointment-form" id="heartHealthClinic" onsubmit="submitAppointment('heartHealthClinic'); return false;">
+                            <label for="date">Preferred Date:</label>
+                            <input type="date" id="date" name="date" required>
+                            <label for="time">Preferred Time:</label>
+                            <input type="time" id="time" name="time" required>
+                            <button type="submit">Submit Appointment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="clinic-card">
+                        <h2>HealthyLife Family Clinic</h2>
+                        <p>Address: Laulai,Gomti Nagar, Lucknow</p>
+                        <p>Contact: (555) 567-8901</p>
+                        <p>Services: Dermatology, Gynecology</p>
+                        <p>Working Hours: Mon-Thu 10:00 AM - 8:00 PM, Fri 10:00 AM - 6:00 PM</p>
+                        <button class="book-appointment-btn" onclick="toggleAppointmentForm('familyClinic')">Book Appointment</button>
+                        <form class="appointment-form" id="familyClinic" onsubmit="submitAppointment('familyClinic'); return false;">
+                            <label for="date">Preferred Date:</label>
+                            <input type="date" id="date" name="date" required>
+                            <label for="time">Preferred Time:</label>
+                            <input type="time" id="time" name="time" required>
+                            <button type="submit">Submit Appointment</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="center-image">
+            <img src="C:\Users\Sanyam Gupta\Desktop\clinics.webp" alt="Center Image">
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Clinics in Lucknow
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+            function toggleAppointmentForm(clinicId) {
+                var form = document.getElementById(clinicId);
+                form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+            }
+
+        function submitAppointment(clinicId) {
+            var form = document.getElementById(clinicId);
+            var date = form.elements['date'].value;
+            var time = form.elements['time'].value;
+
+            alert('Appointment booked for ' + date + ' at ' + time);
+
+
+            form.reset();
+            form.style.display = "none";
+        }
+    </script>
+
+<script type="text/babel">
+    function CenterImage() {
+        return (
+            React.createElement('div', { className: 'center-image' },
+                React.createElement('img', { src: 'C:\\Users\\Sanyam Gupta\\Desktop\\clinics.webp', alt: 'Center Image' })
+            )
+        );
+    }
+
+    ReactDOM.render(
+        React.createElement(CenterImage),
+        document.getElementById('center-image-container')
+    );
+</script>
+</body>
+</html>
+
